@@ -1,6 +1,6 @@
 package DuckModels;
-import BehaviorInteraces.FlyBehavior;
-import BehaviorInteraces.QuackBehavior;
+import BehaviorInterfaces.FlyBehavior;
+import BehaviorInterfaces.QuackBehavior;
 
 public class MallardDuck extends Duck{
 

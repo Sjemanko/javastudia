@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-import BehaviorInteraces.FlyBehavior;
+import BehaviorInterfaces.FlyBehavior;
 import DuckBehaviorClasses.*;
 import DuckModels.Duck;
 import DuckModels.MallardDuck;

@@ -1,4 +1,4 @@
-package BehaviorInteraces;
+package BehaviorInterfaces;
 
 public interface QuackBehavior {
     void quack();

@@ -1,6 +1,6 @@
 package DuckBehaviorClasses;
 
-import BehaviorInteraces.QuackBehavior;
+import BehaviorInterfaces.QuackBehavior;
 
 public class Squeak implements QuackBehavior {
     @Override
