@@ -1,7 +1,11 @@
-import classes.*;
-import interfaces.FlyBehavior;
-
 import java.util.ArrayList;
+
+import BehaviorInteraces.FlyBehavior;
+import DuckBehaviorClasses.*;
+import DuckModels.Duck;
+import DuckModels.MallardDuck;
+import DuckModels.ModelDuck;
+import DuckModels.RubberDuck;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,7 +33,5 @@ public class Main {
             duck.performFly();
             duck.performQuack();
         }
-
-
     }
 }
