@@ -1,6 +1,6 @@
-package DuckModels;
-import BehaviorInterfaces.FlyBehavior;
-import BehaviorInterfaces.QuackBehavior;
+package exercise_4.DuckModels;
+import exercise_4.BehaviorInterfaces.FlyBehavior;
+import exercise_4.BehaviorInterfaces.QuackBehavior;
 
 public abstract class Duck {
 

@@ -15,6 +15,14 @@ import exercise_5.ShopModels.Shop;
 import exercise_5.TaxRateClasses.GermanyTaxStrategy;
 import exercise_5.TaxRateClasses.GreatBritainTaxStrategy;
 import exercise_5.TaxRateClasses.PolandTaxStrategy;
+import exercise_6.Pracownik;
+import exercise_6.Classes.Leczenie;
+import exercise_6.Classes.LiteraturaPopularnoNaukowa;
+import exercise_6.Classes.NaprawaSamochodow;
+import exercise_6.Classes.Rower;
+import exercise_6.Classes.RoznoszenieListow;
+import exercise_6.Classes.Samochod;
+import exercise_6.Classes.Silownia;
 
 public class Main {
     public static void main(String[] args) {
@@ -67,6 +75,29 @@ public class Main {
 
         // ex. 6
 
+        ArrayList<Pracownik> EmployeeList = new ArrayList<Pracownik>(){
+            {
+                add(new Pracownik(new NaprawaSamochodow(), new Silownia(), new Rower()));
+                add(new Pracownik(new NaprawaSamochodow(), new LiteraturaPopularnoNaukowa(), new Rower()));
+                add(new Pracownik(new NaprawaSamochodow(), new Silownia(), new Samochod()));
+                add(new Pracownik(new NaprawaSamochodow(), new LiteraturaPopularnoNaukowa(), new Samochod()));
+                add(new Pracownik(new Leczenie(), new Silownia(), new Rower()));
+                add(new Pracownik(new Leczenie(), new LiteraturaPopularnoNaukowa(), new Rower()));
+                add(new Pracownik(new Leczenie(), new Silownia(), new Samochod()));
+                add(new Pracownik(new Leczenie(), new LiteraturaPopularnoNaukowa(), new Rower()));
+                add(new Pracownik(new RoznoszenieListow(), new Silownia(), new Rower()));
+                add(new Pracownik(new RoznoszenieListow(), new LiteraturaPopularnoNaukowa(), new Rower()));
+                add(new Pracownik(new RoznoszenieListow(), new Silownia(), new Samochod()));
+                add(new Pracownik(new RoznoszenieListow(), new LiteraturaPopularnoNaukowa(), new Samochod()));
+            }
+        };
 
+        for(Pracownik pracownik: EmployeeList)
+        {
+            pracownik.getPraca();
+            pracownik.getDojezdzanie();
+            pracownik.getSpedzanieWolnegoCzasu();
+            System.out.println("------------");
+        }
     }
 }
