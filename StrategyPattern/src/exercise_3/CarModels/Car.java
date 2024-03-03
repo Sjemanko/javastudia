@@ -1,4 +1,4 @@
-package CarModels;
+package exercise_3.CarModels;
 
 public class Car {
     private String carName;

@@ -1,6 +1,6 @@
-package CarSpeed;
+package exercise_3.CarSpeed;
 
-import CarModels.Car;
+import exercise_3.CarModels.Car;
 
 public class CarSpeed {
     private Car car;

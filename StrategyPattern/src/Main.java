@@ -1,20 +1,20 @@
 import java.util.ArrayList;
 
-import BehaviorInterfaces.FlyBehavior;
-import CarModels.Car;
-import CarSpeed.CarSpeed;
-import DuckBehaviorClasses.*;
-import DuckModels.Duck;
-import DuckModels.MallardDuck;
-import DuckModels.ModelDuck;
-import DuckModels.RubberDuck;
-import ShopModels.BritishShop;
-import ShopModels.GermanShop;
-import ShopModels.PolishShop;
-import ShopModels.Shop;
-import TaxRateClasses.GermanyTaxStrategy;
-import TaxRateClasses.GreatBritainTaxStrategy;
-import TaxRateClasses.PolandTaxStrategy;
+import exercise_3.CarModels.Car;
+import exercise_3.CarSpeed.CarSpeed;
+import exercise_4.BehaviorInterfaces.FlyBehavior;
+import exercise_4.DuckBehaviorClasses.*;
+import exercise_4.DuckModels.Duck;
+import exercise_4.DuckModels.MallardDuck;
+import exercise_4.DuckModels.ModelDuck;
+import exercise_4.DuckModels.RubberDuck;
+import exercise_5.ShopModels.BritishShop;
+import exercise_5.ShopModels.GermanShop;
+import exercise_5.ShopModels.PolishShop;
+import exercise_5.ShopModels.Shop;
+import exercise_5.TaxRateClasses.GermanyTaxStrategy;
+import exercise_5.TaxRateClasses.GreatBritainTaxStrategy;
+import exercise_5.TaxRateClasses.PolandTaxStrategy;
 
 public class Main {
     public static void main(String[] args) {
@@ -66,7 +66,7 @@ public class Main {
         }
 
         // ex. 6
-        
+
 
     }
 }

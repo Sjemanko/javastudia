@@ -1,6 +1,6 @@
-package TaxRateClasses;
+package exercise_5.TaxRateClasses;
 
-import TaxRateInterface.TaxRate;
+import exercise_5.TaxRateInterface.TaxRate;
 
 public class PolandTaxStrategy implements TaxRate {
     
@@ -8,5 +8,5 @@ public class PolandTaxStrategy implements TaxRate {
     public void countTax() {
         System.out.println("Poland tax rate: 23%");
     }
-    
+
 }

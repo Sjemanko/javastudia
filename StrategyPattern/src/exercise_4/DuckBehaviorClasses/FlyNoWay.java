@@ -1,6 +1,6 @@
-package DuckBehaviorClasses;
+package exercise_4.DuckBehaviorClasses;
 
-import BehaviorInterfaces.FlyBehavior;
+import exercise_4.BehaviorInterfaces.FlyBehavior;
 
 public class FlyNoWay implements FlyBehavior {
     @Override

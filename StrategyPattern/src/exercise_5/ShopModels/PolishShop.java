@@ -1,6 +1,6 @@
-package ShopModels;
+package exercise_5.ShopModels;
 
-import TaxRateInterface.TaxRate;
+import exercise_5.TaxRateInterface.TaxRate;
 
 public class PolishShop extends Shop {
 

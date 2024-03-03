@@ -1,6 +1,6 @@
-package TaxRateClasses;
+package exercise_5.TaxRateClasses;
 
-import TaxRateInterface.TaxRate;
+import exercise_5.TaxRateInterface.TaxRate;
 
 public class GermanyTaxStrategy implements TaxRate {
 
