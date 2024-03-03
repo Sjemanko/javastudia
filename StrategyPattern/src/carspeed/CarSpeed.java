@@ -1,6 +1,10 @@
-package carspeed;
+package CarSpeed;
+
+import CarModels.Car;
 
 public class CarSpeed {
+    private Car car;
+
     public CarSpeed(Car car)
     {
         this.car = car;
@@ -15,7 +19,4 @@ public class CarSpeed {
     {
         System.out.println(car.getCarName());
     }
-
-    private Car car;
 }
-
