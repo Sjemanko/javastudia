@@ -8,6 +8,13 @@ import DuckModels.Duck;
 import DuckModels.MallardDuck;
 import DuckModels.ModelDuck;
 import DuckModels.RubberDuck;
+import ShopModels.BritishShop;
+import ShopModels.GermanShop;
+import ShopModels.PolishShop;
+import ShopModels.Shop;
+import TaxRateClasses.GermanyTaxStrategy;
+import TaxRateClasses.GreatBritainTaxStrategy;
+import TaxRateClasses.PolandTaxStrategy;
 
 public class Main {
     public static void main(String[] args) {
@@ -42,5 +49,21 @@ public class Main {
             duck.performFly();
             duck.performQuack();
         }
+
+        // ex. 5
+
+        ArrayList<Shop> shopList = new ArrayList<Shop>(){
+            {
+                add(new PolishShop("Poland", new PolandTaxStrategy()));
+                add(new GermanShop("Germany", new GermanyTaxStrategy()));
+                add(new BritishShop("Great Britain", new GreatBritainTaxStrategy()));
+            }
+        };
+
+        for(Shop shop: shopList)
+        {
+            shop.showTaxTreshold();
+        }
+
     }
 }
