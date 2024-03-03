@@ -54,9 +54,9 @@ public class Main {
 
         ArrayList<Shop> shopList = new ArrayList<Shop>(){
             {
-                add(new PolishShop("Poland", new PolandTaxStrategy()));
-                add(new GermanShop("Germany", new GermanyTaxStrategy()));
-                add(new BritishShop("Great Britain", new GreatBritainTaxStrategy()));
+                add(new PolishShop(new PolandTaxStrategy()));
+                add(new GermanShop(new GermanyTaxStrategy()));
+                add(new BritishShop(new GreatBritainTaxStrategy()));
             }
         };
 

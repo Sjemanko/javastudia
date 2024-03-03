@@ -6,8 +6,7 @@ public abstract class Shop {
     TaxRate tax;
     String country;
 
-    public Shop(String country, TaxRate tax){
-        this.country = country;
+    public Shop(TaxRate tax){
         this.tax = tax;
     }
 
@@ -21,10 +20,6 @@ public abstract class Shop {
 
     public void setTax(TaxRate tax) {
         this.tax = tax;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
     }
 
     public void showTaxTreshold(){
