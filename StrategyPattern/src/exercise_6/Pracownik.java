@@ -9,9 +9,11 @@ public class Pracownik {
     private Pracowac praca;
     private SpedzanieWolnegoCzasu spedzanieWolnegoCzasu;
     private Dojezdzac dojezdzanie;
+    private String zawod;
 
-    public Pracownik(Pracowac praca, SpedzanieWolnegoCzasu spedzanieWolnegoCzasu, Dojezdzac dojezdzanie)
+    public Pracownik(String zawod, Pracowac praca, SpedzanieWolnegoCzasu spedzanieWolnegoCzasu, Dojezdzac dojezdzanie)
     {
+        this.zawod = zawod;
         this.praca = praca;
         this.spedzanieWolnegoCzasu = spedzanieWolnegoCzasu;
         this.dojezdzanie = dojezdzanie;
@@ -39,5 +41,10 @@ public class Pracownik {
     
     public void setDojezdzanie(Dojezdzac dojezdzanie){
         this.dojezdzanie = dojezdzanie;
+    }
+    
+    public String getZawod()
+    {
+        return zawod;
     }
 }

@@ -33,6 +33,9 @@ public class Main {
         carSpeed.showCarName();
 
         // ex. 4
+        
+        System.out.println();
+
         ArrayList<Duck> ducksList = new ArrayList<Duck>();
         ducksList.add(new MallardDuck(new Quack(), new FlyWithWings()));
         ducksList.add(new ModelDuck(new MuteQuack(), new FlyNoWay()));
@@ -60,6 +63,8 @@ public class Main {
 
         // ex. 5
 
+        System.out.println();
+
         ArrayList<Shop> shopList = new ArrayList<Shop>(){
             {
                 add(new PolishShop(new PolandTaxStrategy()));
@@ -75,25 +80,28 @@ public class Main {
 
         // ex. 6
 
+        System.out.println();
+
         ArrayList<Pracownik> EmployeeList = new ArrayList<Pracownik>(){
             {
-                add(new Pracownik(new NaprawaSamochodow(), new Silownia(), new Rower()));
-                add(new Pracownik(new NaprawaSamochodow(), new LiteraturaPopularnoNaukowa(), new Rower()));
-                add(new Pracownik(new NaprawaSamochodow(), new Silownia(), new Samochod()));
-                add(new Pracownik(new NaprawaSamochodow(), new LiteraturaPopularnoNaukowa(), new Samochod()));
-                add(new Pracownik(new Leczenie(), new Silownia(), new Rower()));
-                add(new Pracownik(new Leczenie(), new LiteraturaPopularnoNaukowa(), new Rower()));
-                add(new Pracownik(new Leczenie(), new Silownia(), new Samochod()));
-                add(new Pracownik(new Leczenie(), new LiteraturaPopularnoNaukowa(), new Rower()));
-                add(new Pracownik(new RoznoszenieListow(), new Silownia(), new Rower()));
-                add(new Pracownik(new RoznoszenieListow(), new LiteraturaPopularnoNaukowa(), new Rower()));
-                add(new Pracownik(new RoznoszenieListow(), new Silownia(), new Samochod()));
-                add(new Pracownik(new RoznoszenieListow(), new LiteraturaPopularnoNaukowa(), new Samochod()));
+                add(new Pracownik("Zawód1", new NaprawaSamochodow(), new Silownia(), new Rower()));
+                add(new Pracownik("Zawód2", new NaprawaSamochodow(), new LiteraturaPopularnoNaukowa(), new Rower()));
+                add(new Pracownik("Zawód3", new NaprawaSamochodow(), new Silownia(), new Samochod()));
+                add(new Pracownik("Zawód4", new NaprawaSamochodow(), new LiteraturaPopularnoNaukowa(), new Samochod()));
+                add(new Pracownik("Zawód5", new Leczenie(), new Silownia(), new Rower()));
+                add(new Pracownik("Zawód6", new Leczenie(), new LiteraturaPopularnoNaukowa(), new Rower()));
+                add(new Pracownik("Zawód7", new Leczenie(), new Silownia(), new Samochod()));
+                add(new Pracownik("Zawód8", new Leczenie(), new LiteraturaPopularnoNaukowa(), new Rower()));
+                add(new Pracownik("Zawód9", new RoznoszenieListow(), new Silownia(), new Rower()));
+                add(new Pracownik("Zawód10", new RoznoszenieListow(), new LiteraturaPopularnoNaukowa(), new Rower()));
+                add(new Pracownik("Zawód11", new RoznoszenieListow(), new Silownia(), new Samochod()));
+                add(new Pracownik("Zawód12", new RoznoszenieListow(), new LiteraturaPopularnoNaukowa(), new Samochod()));
             }
         };
 
         for(Pracownik pracownik: EmployeeList)
         {
+            System.out.println(pracownik.getZawod());
             pracownik.getPraca();
             pracownik.getDojezdzanie();
             pracownik.getSpedzanieWolnegoCzasu();

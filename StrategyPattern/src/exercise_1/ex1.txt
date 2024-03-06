@@ -1,0 +1,1 @@
+Wzorzec strategii od zwykłej implementacji interfejsu różni się łatwością rozszerzenia systemu, rozgraniczeniem rzeczy zmiennych od stałych oraz przy większym systemie zapobiega redundancji kodu. Wadą jest początkowe skomplikowanie implementacji strategii do potrzeb rozwiązania problemu, oraz tworzenie dużej ilości klas i interfejsów.
