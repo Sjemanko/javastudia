@@ -1,28 +1,28 @@
 import java.util.ArrayList;
 
-import exercise_3.CarClasses.CarInfo;
-import exercise_3.CarClasses.CarSpeed;
-import exercise_3.CarModels.Car;
-import exercise_3.CarModels.Toyota;
-import exercise_3.CarModels.Volvo;
-import exercise_4.BehaviorInterfaces.FlyBehavior;
-import exercise_4.DuckBehaviorClasses.*;
-import exercise_4.DuckModels.Duck;
-import exercise_4.DuckModels.MallardDuck;
-import exercise_4.DuckModels.ModelDuck;
-import exercise_4.DuckModels.RubberDuck;
-import exercise_5.ShopModels.Shop;
-import exercise_5.TaxRateClasses.GermanyTaxStrategy;
-import exercise_5.TaxRateClasses.GreatBritainTaxStrategy;
-import exercise_5.TaxRateClasses.PolandTaxStrategy;
-import exercise_6.Pracownik;
-import exercise_6.Classes.Leczenie;
-import exercise_6.Classes.LiteraturaPopularnoNaukowa;
-import exercise_6.Classes.NaprawaSamochodow;
-import exercise_6.Classes.Rower;
-import exercise_6.Classes.RoznoszenieListow;
-import exercise_6.Classes.Samochod;
-import exercise_6.Classes.Silownia;
+import exercise_1_3.CarClasses.CarInfo;
+import exercise_1_3.CarClasses.CarSpeed;
+import exercise_1_3.CarModels.Car;
+import exercise_1_3.CarModels.Toyota;
+import exercise_1_3.CarModels.Volvo;
+import exercise_1_4.BehaviorInterfaces.FlyBehavior;
+import exercise_1_4.DuckBehaviorClasses.*;
+import exercise_1_4.DuckModels.Duck;
+import exercise_1_4.DuckModels.MallardDuck;
+import exercise_1_4.DuckModels.ModelDuck;
+import exercise_1_4.DuckModels.RubberDuck;
+import exercise_1_5.ShopModels.Shop;
+import exercise_1_5.TaxRateClasses.GermanyTaxStrategy;
+import exercise_1_5.TaxRateClasses.GreatBritainTaxStrategy;
+import exercise_1_5.TaxRateClasses.PolandTaxStrategy;
+import exercise_1_6.Pracownik;
+import exercise_1_6.Classes.Leczenie;
+import exercise_1_6.Classes.LiteraturaPopularnoNaukowa;
+import exercise_1_6.Classes.NaprawaSamochodow;
+import exercise_1_6.Classes.Rower;
+import exercise_1_6.Classes.RoznoszenieListow;
+import exercise_1_6.Classes.Samochod;
+import exercise_1_6.Classes.Silownia;
 
 public class Main {
     public static void main(String[] args) {
