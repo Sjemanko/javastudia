@@ -11,9 +11,6 @@ import exercise_4.DuckModels.Duck;
 import exercise_4.DuckModels.MallardDuck;
 import exercise_4.DuckModels.ModelDuck;
 import exercise_4.DuckModels.RubberDuck;
-import exercise_5.ShopModels.BritishShop;
-import exercise_5.ShopModels.GermanShop;
-import exercise_5.ShopModels.PolishShop;
 import exercise_5.ShopModels.Shop;
 import exercise_5.TaxRateClasses.GermanyTaxStrategy;
 import exercise_5.TaxRateClasses.GreatBritainTaxStrategy;
@@ -71,19 +68,18 @@ public class Main {
         // ex. 5
 
         System.out.println();
+        
+        // Polish client
+        Shop shop = new Shop(new PolandTaxStrategy());
+        shop.showTaxTreshold();
 
-        ArrayList<Shop> shopList = new ArrayList<Shop>(){
-            {
-                add(new PolishShop(new PolandTaxStrategy()));
-                add(new GermanShop(new GermanyTaxStrategy()));
-                add(new BritishShop(new GreatBritainTaxStrategy()));
-            }
-        };
+        // German client
+        shop.setTax(new GermanyTaxStrategy());
+        shop.showTaxTreshold();
 
-        for(Shop shop: shopList)
-        {
-            shop.showTaxTreshold();
-        }
+        // British client
+        shop.setTax(new GreatBritainTaxStrategy());
+        shop.showTaxTreshold();
 
         // ex. 6
 

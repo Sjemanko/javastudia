@@ -2,7 +2,7 @@ package exercise_5.ShopModels;
 
 import exercise_5.TaxRateInterface.TaxRate;
 
-public abstract class Shop {
+public class Shop {
     TaxRate tax;
 
     public Shop(TaxRate tax){
