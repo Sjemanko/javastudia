@@ -24,14 +24,21 @@ import exercise_1_6.Classes.RoznoszenieListow;
 import exercise_1_6.Classes.Samochod;
 import exercise_1_6.Classes.Silownia;
 import exercise_2_1.Hero;
-import exercise_2_1.Behaviors.Bow;
-import exercise_2_1.Behaviors.Cannon;
-import exercise_2_1.Behaviors.Gun;
-import exercise_2_1.Behaviors.Sword;
 import exercise_2_1.Models.Gunner;
 import exercise_2_1.Models.Hunter;
 import exercise_2_1.Models.Knight;
 import exercise_2_1.Models.Shooter;
+import exercise_2_1.WeaponClasses.Bow;
+import exercise_2_1.WeaponClasses.Cannon;
+import exercise_2_1.WeaponClasses.Gun;
+import exercise_2_1.WeaponClasses.Sword;
+import exercise_2_2.Advertisement;
+import exercise_2_2.AdvertisementLanguages.ChineseLanguage;
+import exercise_2_2.AdvertisementLanguages.EnglishLanguage;
+import exercise_2_2.AdvertisementLanguages.PolishLanguage;
+import exercise_2_2.AdvertisementTypes.EmailAd;
+import exercise_2_2.AdvertisementTypes.SMSAd;
+import exercise_2_2.AdvertisementTypes.VoiceMessageAd;
 
 public class Main {
     public static void main(String[] args) {
@@ -136,5 +143,33 @@ public class Main {
             hero.getWeaponType();
             System.out.println("------------");
         }
+
+        // exercise 2_2
+
+        Advertisement ad = new Advertisement();
+        
+        // Client from China, voice message type
+        ad.setAdvertisementLanguage(new ChineseLanguage());
+        ad.setAdvertisementType(new VoiceMessageAd());
+
+        ad.translateAd();
+        ad.showAdType();
+        System.out.println();
+
+        // Client from Great Britain, sms type
+        ad.setAdvertisementLanguage(new EnglishLanguage());
+        ad.setAdvertisementType(new SMSAd());
+
+        ad.translateAd();
+        ad.showAdType();
+        System.out.println();
+
+        // Client from Poland, email type
+        ad.setAdvertisementLanguage(new PolishLanguage());
+        ad.setAdvertisementType(new EmailAd());
+
+        ad.translateAd();
+        ad.showAdType();
+        System.out.println();
     }
 }
