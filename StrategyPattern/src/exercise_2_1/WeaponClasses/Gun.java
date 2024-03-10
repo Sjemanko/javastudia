@@ -1,4 +1,4 @@
-package exercise_2_1.Behaviors;
+package exercise_2_1.WeaponClasses;
 
 import exercise_2_1.Interfaces.WeaponType;
 
