@@ -23,10 +23,19 @@ import exercise_1_6.Classes.Rower;
 import exercise_1_6.Classes.RoznoszenieListow;
 import exercise_1_6.Classes.Samochod;
 import exercise_1_6.Classes.Silownia;
+import exercise_2_1.Hero;
+import exercise_2_1.Behaviors.Bow;
+import exercise_2_1.Behaviors.Cannon;
+import exercise_2_1.Behaviors.Gun;
+import exercise_2_1.Behaviors.Sword;
+import exercise_2_1.Models.Gunner;
+import exercise_2_1.Models.Hunter;
+import exercise_2_1.Models.Knight;
+import exercise_2_1.Models.Shooter;
 
 public class Main {
     public static void main(String[] args) {
-        // ex. 3
+        // ex. 1_3
         Car car1 = new Toyota(new CarInfo("Toyota"),new CarSpeed("255"));
         Car car2 = new Volvo(new CarInfo("Volvo"),new CarSpeed("500"));
 
@@ -36,7 +45,7 @@ public class Main {
         car2.showCarName();
         car2.showMaxSpeedInfo();
 
-        // ex. 4
+        // ex. 1_4
         
         System.out.println();
 
@@ -65,7 +74,7 @@ public class Main {
             duck.performQuack();
         }
 
-        // ex. 5
+        // ex. 1_5
 
         System.out.println();
         
@@ -81,7 +90,7 @@ public class Main {
         shop.setTax(new GreatBritainTaxStrategy());
         shop.showTaxTreshold();
 
-        // ex. 6
+        // ex. 1_6
 
         System.out.println();
 
@@ -108,6 +117,23 @@ public class Main {
             pracownik.getPraca();
             pracownik.getDojezdzanie();
             pracownik.getSpedzanieWolnegoCzasu();
+            System.out.println("------------");
+        }
+
+        // exercise 2_1
+        ArrayList<Hero> champions = new ArrayList<Hero>(){
+            {
+                add(new Hunter("Majkel", 150, new Bow()));
+                add(new Knight("Lord Farquaad", 250, new Sword()));
+                add(new Gunner("Operator of a 3-pound cannon", 125, new Cannon()));
+                add(new Shooter("szczelacz123", 100 , new Gun()));
+            }
+        };
+
+        for(Hero hero: champions)
+        {
+            System.out.println(hero.toString());
+            hero.getWeaponType();
             System.out.println("------------");
         }
     }
