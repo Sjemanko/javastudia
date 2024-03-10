@@ -1,27 +1,34 @@
 package exercise_3.CarModels;
 
-public class Car {
-    private String carName;
-    private int maxSpeed;
+import exercise_3.Interfaces.CarDetails;
+import exercise_3.Interfaces.CarFactors;
 
-    public Car(String carName, int maxSpeed){
-        this.carName = carName;
-        this.maxSpeed = maxSpeed;
+public abstract class Car {
+    private CarDetails carDetails;
+    private CarFactors carFactors;
+
+    public Car(CarDetails carDetails, CarFactors carFactors){
+        this.carDetails = carDetails;
+        this.carFactors = carFactors;
     }
 
-    public String getCarName() {
-        return carName;
+    public void setCarDetails(CarDetails carDetails) {
+        this.carDetails = carDetails;
     }
 
-    public int getMaxSpeed() {
-        return maxSpeed;
+    public void setCarFactors(CarFactors carFactors)
+    {
+        this.carFactors = carFactors;
     }
 
-    public void setCarName(String carName) {
-        this.carName = carName;
+    public void showMaxSpeedInfo()
+    {
+        carFactors.getMaxSpeed();
     }
 
-    public void setMaxSpeed(int maxSpeed) {
-        this.maxSpeed = maxSpeed;
+    public void showCarName()
+    {
+        carDetails.showCarName();
     }
+
 }

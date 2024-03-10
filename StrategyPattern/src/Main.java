@@ -1,7 +1,10 @@
 import java.util.ArrayList;
 
+import exercise_3.CarClasses.CarInfo;
+import exercise_3.CarClasses.CarSpeed;
 import exercise_3.CarModels.Car;
-import exercise_3.CarSpeed.CarSpeed;
+import exercise_3.CarModels.Toyota;
+import exercise_3.CarModels.Volvo;
 import exercise_4.BehaviorInterfaces.FlyBehavior;
 import exercise_4.DuckBehaviorClasses.*;
 import exercise_4.DuckModels.Duck;
@@ -27,10 +30,14 @@ import exercise_6.Classes.Silownia;
 public class Main {
     public static void main(String[] args) {
         // ex. 3
-        CarSpeed carSpeed = new CarSpeed(new Car("Volvo", 255));
+        Car car1 = new Toyota(new CarInfo("Toyota"),new CarSpeed("255"));
+        Car car2 = new Volvo(new CarInfo("Volvo"),new CarSpeed("500"));
 
-        System.out.println(carSpeed.getMaxSpeed());
-        carSpeed.showCarName();
+        car1.showCarName();
+        car1.showMaxSpeedInfo();
+
+        car2.showCarName();
+        car2.showMaxSpeedInfo();
 
         // ex. 4
         
