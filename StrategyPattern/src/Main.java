@@ -33,6 +33,7 @@ import exercise_2_1.WeaponClasses.Cannon;
 import exercise_2_1.WeaponClasses.Gun;
 import exercise_2_1.WeaponClasses.Sword;
 import exercise_2_2.Advertisement;
+import exercise_2_2.Client;
 import exercise_2_2.AdvertisementLanguages.ChineseLanguage;
 import exercise_2_2.AdvertisementLanguages.EnglishLanguage;
 import exercise_2_2.AdvertisementLanguages.PolishLanguage;
@@ -147,29 +148,24 @@ public class Main {
         // exercise 2_2
 
         Advertisement ad = new Advertisement();
-        
-        // Client from China, voice message type
-        ad.setAdvertisementLanguage(new ChineseLanguage());
-        ad.setAdvertisementType(new VoiceMessageAd());
 
-        ad.translateAd();
+        // Client from China, voice message type
+        ad.setAdvertisementType(new VoiceMessageAd());
+        ad.sendTranslatedAd(new Client(new ChineseLanguage()));
         ad.showAdType();
+
         System.out.println();
 
         // Client from Great Britain, sms type
-        ad.setAdvertisementLanguage(new EnglishLanguage());
         ad.setAdvertisementType(new SMSAd());
-
-        ad.translateAd();
+        ad.sendTranslatedAd(new Client(new EnglishLanguage()));
         ad.showAdType();
+
         System.out.println();
 
         // Client from Poland, email type
-        ad.setAdvertisementLanguage(new PolishLanguage());
         ad.setAdvertisementType(new EmailAd());
-
-        ad.translateAd();
+        ad.sendTranslatedAd(new Client(new PolishLanguage()));
         ad.showAdType();
-        System.out.println();
     }
 }

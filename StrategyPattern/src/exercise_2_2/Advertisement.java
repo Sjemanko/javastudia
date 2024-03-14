@@ -1,17 +1,9 @@
 package exercise_2_2;
 
-import exercise_2_2.Interfaces.AdvertisementLanguage;
 import exercise_2_2.Interfaces.AdvertisementType;
 
 public class Advertisement {
-    private AdvertisementLanguage advertisementLanguage;
     private AdvertisementType advertisementType;
-
-    public Advertisement(AdvertisementLanguage advertisementLanguage, AdvertisementType advertisementType)
-    {
-        this.advertisementLanguage = advertisementLanguage;
-        this.advertisementType = advertisementType;
-    }
 
     public Advertisement(){ }
 
@@ -25,13 +17,8 @@ public class Advertisement {
         this.advertisementType = advertisementType;
     }
 
-    public void translateAd()
+    public void sendTranslatedAd(Client client)
     {
-        this.advertisementLanguage.translateAd();
-    }
-
-    public void setAdvertisementLanguage(AdvertisementLanguage advertisementLanguage)
-    {
-        this.advertisementLanguage = advertisementLanguage;
+        client.getPrefferedLanguage().translateAd();
     }
 }
