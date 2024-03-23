@@ -6,7 +6,7 @@ public class RomanPizza extends Meal {
 
     public RomanPizza()
     {
-        description = "Roman pizza";
+        description = "Roman pizza - (Garlic, Tomatoes, Stracciatella cheese, Basil)";
     }
 
     @Override

@@ -1,6 +1,5 @@
 package Decorator;
 
-import Decorator.Beverage;
 
 public class Decaf extends Beverage {
 	public Decaf() {

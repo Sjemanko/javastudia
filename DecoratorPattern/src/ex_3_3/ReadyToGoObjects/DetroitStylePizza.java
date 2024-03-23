@@ -6,7 +6,7 @@ public class DetroitStylePizza extends Meal {
 
      DetroitStylePizza()
     {
-        description = "Detroit-style pizza";
+        description = "Detroit-style pizza - (Cheese, Pepperoni, Sauce)";
     }
 
     @Override

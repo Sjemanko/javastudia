@@ -1,7 +1,5 @@
 package Decorator;
 
-import Decorator.Beverage;
-
 public class Whip extends CondimentDecorator {
 	Beverage beverage;
  
