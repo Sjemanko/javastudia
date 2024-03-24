@@ -1,7 +1,7 @@
-package ex_3_3.Topings;
+package exercise_3_3.Decorators;
 
-import ex_3_3.BaseClasses.Meal;
-import ex_3_3.BaseClasses.PizzaTopingsDecorator;
+import exercise_3_3.BaseClasses.Meal;
+import exercise_3_3.BaseClasses.PizzaTopingsDecorator;
 
 public class ExtraCheese extends PizzaTopingsDecorator{
     Meal meal;
