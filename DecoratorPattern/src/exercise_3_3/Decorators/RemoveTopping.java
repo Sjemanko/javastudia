@@ -16,7 +16,7 @@ public class RemoveTopping extends PizzaTopingsDecorator{
     @Override
     public String getDescription() {
         String description = meal.getDescription();
-        if(description.contains(description.toString()))
+        if(description.contains(toppingToRemove))
         {
             description = description.replace(toppingToRemove,"");
         }

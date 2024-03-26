@@ -41,7 +41,7 @@ import exercise_2_2.AdvertisementTypes.EmailAd;
 import exercise_2_2.AdvertisementTypes.SMSAd;
 import exercise_2_2.AdvertisementTypes.VoiceMessageAd;
 
-public class Main {
+public class StrategyMain {
     public static void main(String[] args) {
         // ex. 1_3
         Car car1 = new Toyota(new CarInfo("Toyota"),new CarSpeed("255"));
