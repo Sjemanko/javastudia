@@ -1,12 +1,18 @@
 package exercise_3_3.Objects;
 
 import exercise_3_3.BaseClasses.Meal;
+import exercise_3_3.Decorators.BaseIngredients.BasilDecorator;
+import exercise_3_3.Decorators.BaseIngredients.CheeseDecorator;
+import exercise_3_3.Decorators.BaseIngredients.GarlicDecorator;
+import exercise_3_3.Decorators.BaseIngredients.TomatoesDecorator;
 
 public class RomanPizza extends Meal {
 
-    public RomanPizza()
+    Meal pizza;
+    public RomanPizza(Meal pizza)
     {
-        description = "Roman pizza - (Garlic, Tomatoes, Stracciatella cheese, Basil)";
+        this.pizza = new BasilDecorator(new CheeseDecorator(new TomatoesDecorator(new GarlicDecorator(pizza)))); 
+        description = "Roman pizza - " + this.pizza.getDescription();
     }
 
     @Override
