@@ -1,10 +1,10 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class WeatherData implements Subject {
     private double temperature;
     private double humidity;
     private double pressure;
-
     ArrayList<Observer> observers;
 
     public WeatherData() {
@@ -15,6 +15,7 @@ public class WeatherData implements Subject {
         this.pressure = pressure;
         this.humidity = humidity;
         this.temperature = temperature;
+
         measurementsChanged();
     }
 
@@ -33,7 +34,6 @@ public class WeatherData implements Subject {
     public double getPressure() {
         return pressure;
     }
-
 
     @Override
     public void registerObserver(Observer observer) {
