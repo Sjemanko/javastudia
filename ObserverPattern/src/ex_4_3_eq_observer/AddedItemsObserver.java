@@ -6,29 +6,24 @@ public class AddedItemsObserver implements Observer, Display{
     private Subject subject;
     private HashMap<String, Integer> itemsList;
     private String lastItemAddedToList;
+    private Integer lastItemAddedAmount;
 
     public AddedItemsObserver(Subject subject)
     {
         this.subject = subject;
+        this.itemsList = new HashMap<>();
         subject.registerObserver(this);
     }
 
     @Override
     public void displayInfo() {
-        System.out.println("\nUpdated item : " + lastItemAddedToList);
-        System.out.println("\nCurrent equipment items: ");
-        for (String name: itemsList.keySet()) {
-            String key = name.toString();
-            String value = itemsList.get(name).toString();
-            System.out.println(key + " - " + value);
-        }
+        System.out.println("\nUpdated item : " + lastItemAddedToList + ", amount: " + lastItemAddedAmount);
     }
 
     @Override
-    public void update(HashMap<String, Integer> itemsList, String lastItemAddedToList) {
-        this.itemsList = itemsList;
+    public void update(String lastItemAddedToList, Integer lastItemAddedAmount) {
         this.lastItemAddedToList = lastItemAddedToList;
+        this.lastItemAddedAmount = lastItemAddedAmount;
         displayInfo();
     }
-
 }
