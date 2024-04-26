@@ -1,17 +1,13 @@
 package ex_4_3_eq_observer;
 
-import java.util.HashMap;
-
 public class AddedItemsObserver implements Observer, Display{
     private Subject subject;
-    private HashMap<String, Integer> itemsList;
     private String lastItemAddedToList;
     private Integer lastItemAddedAmount;
 
     public AddedItemsObserver(Subject subject)
     {
         this.subject = subject;
-        this.itemsList = new HashMap<>();
         subject.registerObserver(this);
     }
 

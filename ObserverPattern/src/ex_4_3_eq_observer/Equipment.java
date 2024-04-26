@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class Equipment implements Subject {
     private HashMap<String, Integer> itemList;
     private String lastItemAddedToList;
-    private Integer lastItemCurrentAmount;
+    private Integer lastItemAddedCurrentAmount;
     ArrayList<Observer> observers;
 
     public Equipment() {
@@ -23,7 +23,7 @@ public class Equipment implements Subject {
             itemList.put(item, amount);
         }
         this.lastItemAddedToList = item;
-        this.lastItemCurrentAmount = itemList.get(item);
+        this.lastItemAddedCurrentAmount = itemList.get(item);
         notifyObservers();
     }
 
@@ -54,9 +54,9 @@ public class Equipment implements Subject {
     public void notifyObservers() {
         for(int i = 0; i < observers.size(); i++)
         {
-            observers.get(i).update(lastItemAddedToList, lastItemCurrentAmount);
+            observers.get(i).update(lastItemAddedToList, lastItemAddedCurrentAmount);
         }
-        
+
         System.out.println("\nCurrent equipment items: ");
         for (String name: itemList.keySet()) {
             String key = name.toString();

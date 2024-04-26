@@ -4,6 +4,7 @@ public class QuestItemObserver implements Observer, Display{
     private Subject subject;
     private String questItem;
     private Integer amountOfQuestItems;
+    private Integer questItemCurrentAmount;
 
     public QuestItemObserver(Subject subject)
     {
@@ -18,13 +19,23 @@ public class QuestItemObserver implements Observer, Display{
     }
 
     @Override
-    public void update(String lastItemAddedToList, Integer lastItemAddedAmount)
+    public void update(String lastItemAddedToList, Integer lastItemAddedCurrentAmount)
     {
-        if(lastItemAddedToList == questItem && lastItemAddedAmount >= amountOfQuestItems)
+        if(lastItemAddedToList == questItem)
         {
-            displayInfo();
-            subject.removeObserver(this);
+            this.questItemCurrentAmount = lastItemAddedCurrentAmount;
+            showCurrentQuestState();
+            if(this.questItemCurrentAmount >= amountOfQuestItems)
+            {
+                displayInfo();
+                subject.removeObserver(this);
+            }
         }
+    }
+
+    public void showCurrentQuestState()
+    {
+        System.out.println("Current quest state: " + questItemCurrentAmount + "/" + amountOfQuestItems);
     }
 
     @Override
