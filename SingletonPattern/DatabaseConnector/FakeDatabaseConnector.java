@@ -1,12 +1,9 @@
-package SingletonPattern.DatabaseConnector;
-
-
 public class FakeDatabaseConnector {
 
     private static FakeDatabaseConnector FDCinstanse;
     public static int counter = 0;
 
-    FakeDatabaseConnector() {counter+=1;}
+    private FakeDatabaseConnector() {counter+=1;}
 
     public static FakeDatabaseConnector getInstance() {
         if (FDCinstanse == null) {
